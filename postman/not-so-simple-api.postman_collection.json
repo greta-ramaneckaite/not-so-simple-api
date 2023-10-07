@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "719152e5-e0ba-48f1-a71b-9c5861166f7a",
+		"name": "not-so-simple-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"sentence\": \"The analysts of volksbank did a great job!\" }"
+				},
+				"url": {
+					"raw": "https://g89u8x6jjb.execute-api.eu-west-1.amazonaws.com/v1/process-word",
+					"protocol": "https",
+					"host": [
+						"g89u8x6jjb",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v1",
+						"process-word"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mixed case",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sentence\": \"AbN and ING are two popular banks in the Netherlands.\" }"
+						},
+						"url": {
+							"raw": "https://g89u8x6jjb.execute-api.eu-west-1.amazonaws.com/test/process-word",
+							"protocol": "https",
+							"host": [
+								"g89u8x6jjb",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"process-word"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 07 Oct 2023 15:23:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "60864f47-de4a-4da1-bf0a-27a825e469b4"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "Mb-v6FKSDoEFYfA="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-652177ff-3b61776f66ecd7c90e96c8bd;Sampled=0;lineage=55caeaff:0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mapped_sentence\": \"ABN AMRO and ING Bank are two popular banks in the Netherlands.\"\n}"
+				},
+				{
+					"name": "Upper case",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sentence\": \"The analysts of ABN did a great job!\" }"
+						},
+						"url": {
+							"raw": "https://g89u8x6jjb.execute-api.eu-west-1.amazonaws.com/test/process-word",
+							"protocol": "https",
+							"host": [
+								"g89u8x6jjb",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"process-word"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 07 Oct 2023 15:24:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a7e987fc-7c85-45b6-abe3-86a4b4a331b7"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "Mb-zkGf2joEFSZQ="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-65217816-7394f48713cdb29b2229205d;Sampled=0;lineage=55caeaff:0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mapped_sentence\": \"The analysts of ABN AMRO did a great job!\"\n}"
+				},
+				{
+					"name": "Lower case",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sentence\": \"The analysts of volksbank did a great job!\" }"
+						},
+						"url": {
+							"raw": "https://g89u8x6jjb.execute-api.eu-west-1.amazonaws.com/test/process-word",
+							"protocol": "https",
+							"host": [
+								"g89u8x6jjb",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"process-word"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 07 Oct 2023 15:24:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "ba517ea7-a880-444c-bb8b-7cc4723f8998"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "Mb-3GEwQDoEFiHA="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6521782d-51677d272a04fc6d6a1c77cb;Sampled=0;lineage=55caeaff:0"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mapped_sentence\": \"The analysts of de Volskbank did a great job!\"\n}"
+				}
+			]
+		}
+	]
+}
